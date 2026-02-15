@@ -1,0 +1,20 @@
+{
+  "name": "port-watcher",
+  "version": "1.0.0",
+  "description": "Watch ports for availability changes and notify when they become free or occupied",
+  "main": "src/index.js",
+  "bin": {
+    "port-watcher": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "watch": "node src/index.js"
+  },
+  "keywords": ["port", "watch", "monitor", "devtools"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0"
+  }
+}
