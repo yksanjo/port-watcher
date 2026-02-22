@@ -1,47 +1,84 @@
-# Port Watcher
+# port-watcher
 
-Watch ports for availability changes and notify when they become free or occupied.
+## Detailed Description
 
-## Installation
+port-watcher is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
+
+## Problem Statement
+
+Describe the user or business problem this project solves, the target users, and expected outcomes.
+
+## Solution Overview
+
+Summarize the architecture, core modules, and runtime behavior at a high level.
+
+## Key Features
+
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
+
+## Repository Structure
+
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Git
+- Project runtime/toolchain for this repo
+
+### Local Setup
 
 ```bash
-cd port-watcher
-npm install
+npm ci
+npm run lint
+npm test
+npm run build
 ```
 
 ## Usage
 
-### Watch a port continuously
+Document primary commands, API routes, CLI examples, or UI workflows here.
 
-```bash
-npm start watch 3000
-```
+## Quality Standards
 
-### Wait for a port to become available
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
 
-```bash
-npm start wait 3000
-# With timeout
-npm start wait 3000 -- -t 30
-```
+## Security
 
-### Monitor multiple ports
+See `SECURITY.md` for responsible disclosure and handling guidelines.
 
-```bash
-npm start monitor 3000 3001 8080 27017
-```
+## Contributing
 
-## Commands
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
 
-| Command | Description |
-|---------|-------------|
-| `watch <port>` | Watch a port for changes |
-| `wait <port>` | Wait for port to become available |
-| `monitor [ports...]` | Monitor multiple ports |
+## Roadmap
 
-## Options
+Track upcoming milestones, technical debt, and planned feature work.
 
-- `-i, --interval <seconds>` - Check interval (default: 2s for watch, 5s for monitor)
-- `-o, --once` - Check only once and exit
-- `-q, --quiet` - Minimal output
-- `-t, --timeout <seconds>` - Max time to wait (for wait command)
+## Support
+
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
+
+## License
+
+This project is released under the MIT License.
